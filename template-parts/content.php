@@ -1,25 +1,57 @@
 <?php
 /**
- *    The template for dispalying the content.
+ * The template part for displaying content
  *
- * @package    WordPress
- * @subpackage illdy
+ * @package WordPress
+ * @subpackage Proweb
+ * @since Proweb 1.0.2
  */
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'blog-post' ); ?>>
-	<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="blog-post-title"><?php the_title(); ?></a>
-	<?php if ( has_post_thumbnail() ){ ?>
-		<div class="blog-post-image">
-			<a href="<?php echo get_the_permalink(); ?>"><?php the_post_thumbnail( 'illdy-blog-list' ); ?></a>
-		</div><!--/.blog-post-image-->
-	<?php }elseif ( get_theme_mod( 'illdy_disable_random_featured_image' ) ) { ?>
-		<div class="blog-post-image">
-			<a href="<?php echo get_the_permalink(); ?>"><img src="<?php echo illdy_get_random_featured_image(); ?>"></a>
-		</div><!--/.blog-post-image-->
-	<?php } ?>
-	<?php do_action( 'illdy_archive_meta_content' ); ?>
-	<div class="blog-post-entry">
-		<?php the_excerpt(); ?>
-	</div><!--/.blog-post-entry-->
-	<a href="<?php the_permalink(); ?>" title="<?php _e( 'Read more', 'illdy' ); ?>" class="blog-post-button"><?php _e( 'Read more', 'illdy' ); ?></a>
-</article><!--/#post-<?php the_ID(); ?>.blog-post-->
+
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<header class="entry-header">
+		<?php if ( is_sticky() && is_home() && ! is_paged() ) : ?>
+			<span class="sticky-post"><?php _e( 'Featured', 'proweb' ); ?></span>
+		<?php endif; ?>
+
+		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+	</header><!-- .entry-header -->
+
+	<?php proweb_excerpt(); ?>
+
+	<?php proweb_post_thumbnail(); ?>
+
+	<div class="entry-content">
+		<?php
+			/* translators: %s: Name of current post */
+			the_content( sprintf(
+				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'proweb' ),
+				get_the_title()
+			) );
+
+			wp_link_pages( array(
+				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'proweb' ) . '</span>',
+				'after'       => '</div>',
+				'link_before' => '<span>',
+				'link_after'  => '</span>',
+				'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'proweb' ) . ' </span>%',
+				'separator'   => '<span class="screen-reader-text">, </span>',
+			) );
+		?>
+	</div><!-- .entry-content -->
+
+	<footer class="entry-footer">
+		<?php proweb_entry_meta(); ?>
+		<?php
+			edit_post_link(
+				sprintf(
+					/* translators: %s: Name of current post */
+					__( 'Edit<span class="screen-reader-text"> "%s"</span>', 'proweb' ),
+					get_the_title()
+				),
+				'<span class="edit-link">',
+				'</span>'
+			);
+		?>
+	</footer><!-- .entry-footer -->
+</article><!-- #post-## -->

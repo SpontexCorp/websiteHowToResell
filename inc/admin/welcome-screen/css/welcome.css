@@ -1,87 +1,174 @@
-/* ----------------------------------------------------------------------------
- * Welcome Page CSS
- * ------------------------------------------------------------------------- */
-
-/* New Logo */
-.wp-badge.epsilon-welcome-logo {
-    color: #fff;
-    background-image: url(../img/colorlib.png);
-    background-position: center center;
-    background-size: 70%;
-    background-repeat: no-repeat;
-}
-
-/* proper positioning of the icons */
-.epsilon-wrap i.dashicons {
-    margin-right: 15px;
-    position: relative;
-    top: 3px;
-}
-
-.feature-section.action-required {
-    margin-top: 20px;
-    padding-bottom: 0;
-}
-
-.action-required span.hooray {
-    padding: 10px;
-    display: inline-block;
-}
-
-.action-required span.red {
-    color: #a00;
-}
-
-.illdy-action-required-box:last-of-type {
-    border-bottom: none;
-}
-
-.illdy-action-required-box {
-    display: block;
-    border-left: 3px solid #f8800c;
-    padding: 10px 25px 5px;
-    background: #FFFFFF;
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
-    margin-bottom: 15px;
-    position: relative;
-}
-
-.about-wrap .illdy-action-required-box h4 {
-    display: block;
-    margin-top: 0;
+.proweb-nav-tabs {
     margin-bottom: 0;
 }
-
-.about-wrap .illdy-action-required-box p {
+.proweb-nav-tabs:after {
+    clear: both;
+    display: table;
+    content: " ";
+}
+.proweb-nav-tabs > li {
+    float: left;
+    margin-bottom: -1px;
     display: block;
-    margin-top: 0;
-    width: 100%;
+}
+.proweb-nav-tabs > li > a {
+    border: 1px solid transparent;
+    border-radius: 4px 4px 0 0;
+    display: block;
+    padding: 10px 15px;
+	text-decoration: none;
+}
+.proweb-nav-tabs > li.active > a, .proweb-nav-tabs > li.active > a:focus, .proweb-nav-tabs > li.active > a:hover {
+    color: #555;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+}
+.proweb-nav-tabs > li.proweb-w-red-tab > a {
+    color: red;
+    font-weight: bold;
+}
+.proweb-tab-content {
+	background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    width: 960px;
+    float: left;
+}
+.proweb-tab-content > .tab-pane {
+    display: none;
+}
+.proweb-tab-content > .active {
+    display: block;
+}
+
+.proweb-tab-pane {
+	padding: 30px;
+}
+.proweb-tab-pane {
+    display: none;
+}
+.proweb-tab-pane.active {
+    display: block;
+}
+
+#proweb-theme-version {
+    font-size: 50%;
+    padding: 10px;
+    background: #ccc;
+}
+#proweb-w-screenshot {
+    border: 1px solid #ccc;
+    margin-top: 30px;
+}
+.proweb-w-activated {
+    cursor:not-allowed !important;
+}
+.proweb-tab-pane-half {
+    width: 45%;
+    float:left;
+    border-left: 1px solid #ccc;
+    padding-left: 20px;
+    margin-top: 15px;
+    padding-right: 20px;
+    margin-bottom: 15px;
+}
+.proweb-tab-content img {
     max-width: 100%;
 }
-
-.about-wrap .illdy-dismiss-required-action {
+.proweb-tab-pane-first-half {
+    border-left: none;
+}
+.proweb-tab-pane-center {
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+.proweb-welcome-title {
+    font-size: 32px;
+}
+.proweb-clear {
+    clear: both;
+}
+.proweb-child-theme-container {
+    position: relative;
+}
+.proweb-child-theme-description {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    text-decoration: none;
-    color: #d54e21;
-    border-radius: 50%;
-    cursor: pointer;
+    top: 100%;
+    left: 0;
+    overflow: auto;
+    box-sizing: border-box;
+    padding: 0;
+    max-width: 100%;
+    height: 100%;
+    background-color: #000000;
+    color: #ffffff;
+    -webkit-transition: all 300ms ease-out;
+    -moz-transition: all 300ms ease-out;
+    -ms-transition: all 300ms ease-out;
+    -o-transition: all 300ms ease-out;
+    transition: all 300ms ease-out;
+    -webkit-transition-delay: 500ms;
+    -moz-transition-delay: 500ms;
+    -ms-transition-delay: 500ms;
+    -o-transition-delay: 500ms;
+    transition-delay: 500ms;
 }
 
-.about-wrap .illdy-required-action-button,
-.about-wrap .illdy-recommended-plugin-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    text-decoration: none;
-    color: #d54e21;
-    border-radius: 50%;
-    cursor: pointer;
+.proweb-child-theme-image-container {
+    position: relative;
+    overflow: hidden;
+}
+.proweb-child-theme-image-container img {
+    max-width: 100%;
+}
+.proweb-child-theme-details .theme-details {
+    padding: 10px;
+    background: none repeat scroll 0 0 #F1F1F1;
+    font-size: 18px;
 }
 
+.proweb-child-theme-details .theme-details.active {
+    background: none repeat scroll 0 0 #2B5F87;
+    color: #fff;
+}
 
-.badge-action-count {
+.proweb-child-theme-details .theme-details .theme-name {
+    float:left;
+}
+.proweb-child-theme-details .theme-details .preview {
+    margin-right: 2px;
+}
+.proweb-fre-pro table {
+    border-collapse: collapse;
+    width: 100%;
+}
+.proweb-fre-pro table tr {
+    border-bottom: 1px solid #ddd;
+}
+.proweb-fre-pro table td {
+    padding: 30px;
+}
+.proweb-fre-pro table th {
+    padding-bottom: 30px;
+}
+.proweb-fre-pro table td span.dashicons-before:before {
+    font-size: 50px;
+    width: auto;
+    height: auto;
+}
+.proweb-fre-pro table td span.dashicons-yes:before {
+    color:green;
+}
+.proweb-fre-pro table td span.dashicons-no-alt:before {
+    color:red;
+}
+.proweb-fre-pro table tr.proweb-text-center {
+    text-align: center;
+}
+.proweb-actions-count {
     padding: 0 6px;
     display: inline-block;
     background-color: #d54e21;
@@ -94,96 +181,79 @@
     -webkit-border-radius: 10px;
     border-radius: 10px;
     z-index: 26;
-    margin-top: 5px;
-    margin-left: 5px;
 }
-
-.wp-submenu .badge-action-count {
-    margin-top: 0;
-}
-
-.plugin_box {
-    height: 330px;
-    margin-top: 15px;
-    text-align: center;
-    background: #FFF;
+.proweb-action-required-box {
     position: relative;
-    border: 1px solid rgba(0, 0, 0, .1);
-    float:left;
 }
-
-.plugin_box .recommended {
-    background: #d25637;
-    color: #FFF;
-    text-transform: uppercase;
-    height: 28px;
-    text-align: center;
-    top: 0;
-    left: 0;
-    right: 0;
-    line-height: 28px;
-    font-size: 10px;
+.proweb-dismiss-required-action {
     position: absolute;
-    font-weight: bold;
+    top: 0px;
+    right: 0px;
+    cursor: pointer;
+    background-color: #D24A4A;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 14px;
+    line-height: 20px;
+}
+.proweb-dismiss-required-action:hover {
+    background-color: #CC8C8C;
 }
 
-.plugin_box img {
-    width: 155px;
-    height: 155px;
-    padding-top: 50px;
-    margin: 0 auto;
-    margin-bottom:15px;
-    display: block;
-    border: 0 none;
+#github.proweb-tab-pane {
+  text-align: center;
 }
 
-.plugin_box .action_bar {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    font-size: 15px;
-    font-weight: 600;
-    height: 18px;
-    margin: 0;
-    padding: 15px;
-    -webkit-box-shadow: inset 0 1px 0 rgba(0, 0, 0, .1);
-    box-shadow: inset 0 1px 0 rgba(0, 0, 0, .1);
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    background: #fff;
-    background: rgba(255, 255, 255, .65);
-    text-align: left;
-    padding-right: 105px;
+#github.proweb-tab-pane .proweb-tab-pane-half {
+  min-height: 160px;
 }
 
-.plugin_box .action_bar.active {
-    background: #23282d;
-    color: #FFF;
+#github.proweb-tab-pane .translate-button, #github .github-button {
+  margin-top: 20px;
 }
 
-.plugin_box .action_button {
-    position: absolute;
-    bottom: -1px;
-    right: -1px;
-    padding: 9px 10px 10px;
-    background: #f6f6f6;
-    border: 1px solid rgba(0, 0, 0, .1);
+#github.proweb-tab-pane .dashicons {
+  color: #0073aa;
+  font-size: 12px;
+  width: auto;
 }
 
-.plugin_box .action_button.active {
-    background: #2c2e2f;
-    bottom: 0;
-    right: -1px;
-    padding: 9px 10px 9px;
-
+#github.proweb-tab-pane h4 {
+  margin:10px;;
 }
 
-.about-wrap .three-col .plugin_box.col {
-    width: 29.81%;
+#github.proweb-tab-pane p.review-link {
+  margin:0;
 }
 
-.about-wrap.epsilon-wrap .feature-section.two-col .col {
-    margin-top: 40px;
+#github.proweb-tab-pane .proweb-tab-pane-half hr {
+  display: none;
+}
+
+/*Breakpoints*/
+
+@media (max-width: 1200px) {
+  .proweb-tab-content {
+    width: 98%;
+  }
+  .proweb-tab-pane-half {
+    width: 43%;
+  }
+}
+@media (max-width: 782px) {
+  #github.proweb-tab-pane .proweb-tab-pane-half hr {
+    display:block;
+  }
+
+  .proweb-tab-pane-half {
+    width: auto;
+    float: none;
+    border-left: none;
+  }
+  .proweb-welcome-title, .proweb-tab-content h1 {
+    line-height: 30px;
+  }
+  .proweb-fre-pro table td {
+    padding: 30px 10px;
+  }
 }

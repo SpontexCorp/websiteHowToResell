@@ -1,44 +1,38 @@
 <?php
 /**
- *    The template for dispalying the single.
+ * The template for displaying all single posts and attachments
  *
- * @package    WordPress
- * @subpackage illdy
+ * @package WordPress
+ * @subpackage Proweb
+ * @since Proweb 1.0.2
  */
 
-global $post;
-$sidebar_enabled = get_post_meta( $post->ID, 'illdy-sidebar-enable', true );
-
+get_header(); ?>
+<?php
+$proweb_blog_layout = get_theme_mod('proweb_blog_layout','rightsidebar');
+$mainclass = "col-md-12 no-pad";
+if($proweb_blog_layout=="rightsidebar") { $mainclass = "col-md-8 no-pad"; }
+if($proweb_blog_layout=="leftsidebar") { $mainclass = "col-md-8 no-pad pull-right"; }
+if($proweb_blog_layout=="nosidebar") { $mainclass = "col-md-12 no-pad"; }
 ?>
+<div id="primary" class="content-area">
+	<div class="<?php echo $mainclass;?>">
+		<?php
+		// Start the loop.
+		while ( have_posts() ) : the_post();
 
-<?php get_header(); ?>
-	<div class="container">
-	<div class="row">
-		<?php if ( is_active_sidebar( 'blog-sidebar' ) ) { ?>
-		<div class="col-sm-8">
-			<?php } else { ?>
-			<div class="col-sm-8 col-sm-offset-2">
-				<?php } ?>
+			// Include the single post content template.
+			get_template_part( 'template-parts/content', 'single' );
 
-				<section id="blog">
-					<?php
-					if ( have_posts() ):
-						while ( have_posts() ):
-							the_post();
-							get_template_part( 'template-parts/content', 'single' );
-						endwhile;
-					endif;
-					?>
-				</section><!--/#blog-->
-			</div><!--/.col-sm-7-->
+			// If comments are open or we have at least one comment, load up the comment template.
+			if ( comments_open() || get_comments_number() ) {
+				comments_template();
+			}
 
-			<?php if ( is_active_sidebar( 'blog-sidebar' ) ) { ?>
-				<div class="col-sm-4">
-					<div id="sidebar">
-						<?php dynamic_sidebar( 'blog-sidebar' ); ?>
-					</div>
-				</div>
-			<?php } ?>
-		</div><!--/.row-->
-	</div><!--/.container-->
+			// End of the loop.
+		endwhile;
+		?>
+	</div>
+	<?php if($proweb_blog_layout!="nosidebar"){ get_sidebar('blog'); }?>
+</div><!-- .content-area -->
 <?php get_footer(); ?>

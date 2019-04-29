@@ -1,82 +1,64 @@
-=== Illdy ===
-
-Contributors: Colorlib
-Tags: blog, e-commerce, education, entertainment, news, food-and-drink, holiday, photography, portfolio
-
-Requires at least: 4.0
-Tested up to: 4.7.2
-Stable tag: 2.0.1
+=== Proweb ===
+Contributors: YayThemes
+Requires at least: WordPress 4.4
+Tested up to: WordPress 4.6
+Version: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: one-column, two-columns, right-sidebar, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready, blog
 
 == Description ==
+Proweb is a modern, clean and beautiful WordPress theme suitable for businesses and services. It has a template to convert existing blog into a website as well as integrate a blog. The onepage layout includes various sections with support to widgets, pricing, woocommerce ready theme and much more.
 
-Illdy is a free premium one page WordPress theme.
+* WooCommerce compitible
+* Widget supported
+* Blog layouts
+* Multiple sections for one page site.
+
+For more information about Proweb please go to http://yaythemes.com/product/proweb.
+
+For demo: http://demo.yaythemes.com/#proweb
 
 == Installation ==
-	
-1. In your admin panel, go to Appearance > Themes and click the Add New button.
-2. Click Upload and Choose File, then select the theme's .zip file. Click Install Now.
-3. Click Activate to use your new theme right away.
 
-= License =
-Illdy WordPress theme, Copyright (C) 2015 Colorlib.com
-Illdy WordPress theme is licensed under the GPL3.
+1. In your admin panel, go to Appearance -> Themes and click the 'Add New' button.
+2. Type in Proweb in the search form and press the 'Enter' key on your keyboard.
+3. Click on the 'Activate' button to use your new theme right away.
+4. Navigate to Appearance > Customize in your admin panel and customize to taste.
 
-Unless otherwise specified, all the theme files, scripts and images are licensed under GNU General Public License.
-The exceptions to this license are as follows:
+== Copyright ==
 
-* Bootstrap v3.3.6 (http://getbootstrap.com):
-    Copyright 2011-2014 Twitter, Inc.
-    Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+Proweb WordPress Theme, Copyright 2014-2015 YayThemes.com. Proweb is distributed under the terms of the GNU GPL
 
-* Images:
-	All images are from Unsplash (	www.unsplash.com	) and Pixabay( www.pixabay.com	)
-	License under Creative Commons Zero.
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 of the License, or
+(at your option) any later version.
 
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
 
-	https://pixabay.com/en/bed-bedroom-door-girl-house-1850893/
+Proweb Theme bundles the following third-party resources:
 
+HTML5 Shiv v3.7.0, Copyright 2014 Alexander Farkas
+Licenses: MIT/GPL2
+Source: https://github.com/aFarkas/html5shiv
 
-	Sources for images used:
-		https://unsplash.com/photos/VviFtDJakYk
-		https://unsplash.com/photos/hoCXpPUMCoE
-		https://pixabay.com/en/coffee­tablet­headphones­work­1128140/
-		https://unsplash.com/photos/T0bQdp74I0U
-		https://unsplash.com/photos/VLT62­JzddA
-		https://pixabay.com/en/turntable­top­view­audio­equipment­1109588/
-		https://pixabay.com/en/computer­apple­imac­keyboard­mouse­791392/
-		https://pixabay.com/en/man­reading­touchscreen­blog­791049/
-		https://pixabay.com/en/workspace­place­of­work­work­766045/
-		https://pixabay.com/en/coffee­coffe­latte­516186/
-		https://unsplash.com/photos/zCevd81eJDU
-		https://unsplash.com/photos/2UE1givDiPM
-		https://unsplash.com/photos/lZlfHGqx44Q
-		https://unsplash.com/photos/71cd1rWqO8M
-		https://unsplash.com/photos/HALe2SmkWAI
-		https://unsplash.com/photos/hiAdjnXZxl8
-		https://unsplash.com/photos/eqsEZNCm4­c
-		https://pixabay.com/en/fashion­beauty­model­portrait­girl­1063100/
-		https://pixabay.com/en/home­office­notebook­home­couch­569153/
-		https://pixabay.com/en/adult-beach-enjoyment-1867618/
-		https://stocksnap.io/photo/7LQZXYOHL9
-		https://stocksnap.io/photo/PLFB4I53U4
-		https://stocksnap.io/photo/D3WN2GEYA3
-		https://pixabay.com/en/canine-cute-dog-footwear-hammock-1851504/
+Genericons icon font, Copyright 2013-2015 Automattic.com
+License: GNU GPL, Version 2 (or later)
+Source: http://www.genericons.com
 
-* Font Awesome:
-	License: SIL OFL 1.1
-	URL: http://scripts.sil.org/OFL
+Image used in screenshot.png: A photo by Austin Schmid (https://unsplash.com/schmidy/), licensed under Creative Commons Zero(http://creativecommons.org/publicdomain/zero/1.0/)
 
-* Google Fonts:
-	Source Sans Pro (https://www.google.com/fonts/specimen/Source+Sans+Pro)
-	License under SIL Open Font License, 1.1
-	Copyright © Paul D. Hunt (https://plus.google.com/108888178732927400671/about)
+== Changelog ==
 
-* owl-carousel.js (http://www.owlcarousel.owlgraphic.com/):
-	Copyright 2013 Bartosz Wojciechowski
-	License under The MIT License (MIT)
+= 1.0.2 =
 
-* count-to.js (https://github.com/mhuggins/jquery-countTo):
-	Copyright Matt Huggins
-	License under MIT license.
+Minor Bug Fixes.
+
+= 1.0.1 =
+
+Initial release.
+Made previous theme widget ready.

@@ -1,37 +1,30 @@
 <?php
 /**
- *	The template for dispalying the page.
+ * The template for displaying pages
  *
- *	@package WordPress
- *	@subpackage illdy
+ * This is the template that displays all pages by default.
+ * Please note that this is the WordPress construct of pages and that
+ * other "pages" on your WordPress site will use a different template.
+ *
+ * @package WordPress
+ * @subpackage Proweb
+ * @since Proweb 1.0.2
  */
+
+get_header(); ?>
+<?php
+// Start the loop.
+while ( have_posts() ) : the_post();
+
+	// Include the page content template.
+	get_template_part( 'template-parts/content', 'page' );
+
+	// If comments are open or we have at least one comment, load up the comment template.
+	if ( comments_open() || get_comments_number() ) {
+		comments_template();
+	}
+
+	// End of the loop.
+endwhile;
 ?>
-<?php get_header(); ?>
-<div class="container">
-	<div class="row">
-		<?php if ( is_active_sidebar( 'page-sidebar' ) ) { ?>
-		<div class="col-sm-8">
-			<?php } else { ?>
-			<div class="col-sm-8 col-sm-offset-2">
-				<?php } ?>
-			<section id="blog">
-				<?php
-				if( have_posts() ):
-					while( have_posts() ):
-						the_post();
-						get_template_part( 'template-parts/content', 'page' );
-					endwhile;
-				endif;
-				?>
-			</section><!--/#blog-->
-		</div><!--/.col-sm-7-->
-		<?php if ( is_active_sidebar( 'page-sidebar' ) ) { ?>
-			<div class="col-sm-4">
-				<div id="sidebar">
-					<?php dynamic_sidebar( 'page-sidebar' ); ?>
-				</div>
-			</div>
-		<?php } ?>
-	</div><!--/.row-->
-</div><!--/.container-->
 <?php get_footer(); ?>
